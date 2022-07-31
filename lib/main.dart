@@ -12,23 +12,27 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(),
         drawer: Drawer(),
         body: Container(
-          width:600,
-          height: 600,
+          width:500,
+          height: 400,
 
           margin: EdgeInsets.all(20),
             //margin: EdgeInsets.only(left: 10, right: 10,top: 2),
           //margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
             //padding: EdgeInsets.only(top: 10, left: 10,bottom: 10),
             decoration: BoxDecoration(
-              image: DecorationImage(image: NetworkImage("https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1")),
-              color: Colors.red,
+              image: DecorationImage(image: AssetImage("images/logo.png"),
+
+                  fit: BoxFit.fill,repeat: ImageRepeat.repeatX),
+
+
+                color: Colors.red,
               border: Border.all(color: Colors.green, width: 20),
             //borderRadius: BorderRadius.circular(100)),
             //borderRadius: BorderRadius.only(topRight: Radius.circular(40),bottomLeft: Radius.circular(40))),
             //border: Border(left: BorderSide(color: Colors.green,width: 10),bottom:BorderSide(color: Colors.grey,width: 15) )),
             borderRadius: BorderRadius.horizontal(
             left: Radius.circular(25)            )),
-            child: Text("How are u",style: TextStyle(fontSize:30),)
+            child: Text("APP WIDGET / FLUTTER",style: TextStyle(fontSize:30),)
 
 
             /*
@@ -48,17 +52,5 @@ class MyApp extends StatelessWidget {
       )
     );
 
-  }
-}
-
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context){
-    return Scaffold(
-      appBar: AppBar(),
-      drawer: Drawer(),
-      body: Text("hello there"),
-    );
   }
 }
