@@ -1,0 +1,95 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Login(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      drawer: Drawer(),
+      body: Text("homepagw"),
+    );
+  }
+}
+
+class Login extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      drawer: Drawer(),
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20),
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              alignment: Alignment.center, //Sentence in center
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.cyanAccent,
+                  border: Border.all(color: Colors.black, width: 2)),
+              //margin: EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                "Internet Privacy - DEMO",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top:10, bottom: 20),
+              width: double.infinity,
+              alignment: Alignment.center,
+              child: Text("Phishing is a type of scam where the scammers disguise themselves as trustworthy source in an attempt to obtain private information such as passwords, credit card information, etc. through the internet."
+
+                  , textAlign: TextAlign.center,style: TextStyle(fontSize: 15,height: 2 ),),
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              decoration:BoxDecoration(
+                border: Border.all(color: Colors.black,width: 2)
+              ),
+              child: Column(
+
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.star,color: Colors.yellow,),
+                          Icon(Icons.star,color: Colors.yellow,),
+                          Icon(Icons.star,color: Colors.yellow),
+                          Icon(Icons.star,color: Colors.yellow),
+                          Icon(Icons.star),
+                        ],
+              ),
+
+                          Text(" 17 Reviews", style: TextStyle(fontSize: 18 ),)
+                        ],
+                        
+                      )
+          ],),)
+
+                            ],
+        ),
+      ),
+    );
+  }
+}
